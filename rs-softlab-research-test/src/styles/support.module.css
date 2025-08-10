@@ -1,0 +1,138 @@
+/* src/components/Support/support.module.css */
+
+.root {
+  padding-block: 5rem;
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #3730a3 100%);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 10;
+}
+
+.headingWrapper {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #e0f2fe;
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.75rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 1.5rem;
+  padding: 1.75rem;
+  text-align: center;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #4338ca;
+  margin-bottom: 0.75rem;
+}
+
+.card .info {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #6366f1;
+  margin-bottom: 0.5rem;
+}
+
+.card .desc {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 50px -15px rgba(99, 102, 241, 0.2);
+  border-color: rgba(124, 58, 237, 0.4);
+}
+
+.ctaWrapper {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.primaryButton {
+  background: linear-gradient(90deg, #8b5cf6, #7c3aed);
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 0.75rem 2.5rem;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  box-shadow: 0 10px 25px -5px rgba(139, 92, 246, 0.4);
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px -5px rgba(139, 92, 246, 0.5);
+}
+
+.primaryButton:active {
+  transform: translateY(0);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .root {
+    padding-block: 4rem;
+  }
+
+  .title {
+    font-size: 2.25rem;
+  }
+
+  .subtitle {
+    font-size: 1.125rem;
+  }
+
+  .cardsGrid {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 1.5rem;
+  }
+
+  .primaryButton {
+    font-size: 1rem;
+    padding: 0.7rem 2rem;
+  }
+}

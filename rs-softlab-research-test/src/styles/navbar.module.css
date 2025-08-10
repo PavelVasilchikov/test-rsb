@@ -1,0 +1,100 @@
+/* src/components/Navbar/Navbar.module.css */
+
+.navbar {
+  background: linear-gradient(90deg, #1e1b4b 0%, #3730a3 40%, #581c87 100%);
+  color: white;
+  box-shadow: 0 25px 50px -12px rgba(124, 58, 237, 0.3);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.navWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  display: flex;
+  align-items: center;
+}
+
+.logo span {
+  color: #c084fc;
+  font-weight: 900;
+}
+
+.logoText {
+  margin-left: 0.375rem;
+}
+
+.navLinks {
+  display: flex;
+  gap: 2rem;
+  margin-top: 0.5rem;
+}
+
+.navLink {
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+  position: relative;
+}
+
+.navLink:hover {
+  color: #ddd;
+  transform: translateY(-1px);
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: linear-gradient(90deg, #a855f7, #8b5cf6);
+  transition: width 0.3s ease;
+  border-radius: 1px;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .navLinks {
+    margin-top: 0.75rem;
+    gap: 1.5rem;
+  }
+
+  .logo {
+    font-size: 1.375rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navLinks {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
