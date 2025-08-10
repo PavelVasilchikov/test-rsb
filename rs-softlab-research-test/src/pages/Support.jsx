@@ -1,10 +1,7 @@
 // src/components/Support/Support.jsx
-import { useEffect } from 'react';
 import styles from '../styles/support.module.css';
 
 export default function Support() {
-  
-
   const contacts = [
     { method: "Телефон", info: "+7 (495) 123-45-67", desc: "Пн–Пт, 9:00–18:00" },
     { method: "Email", info: "support@rssoftlab.ru", desc: "Ответ в течение 24 ч" },
